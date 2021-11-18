@@ -1,0 +1,23 @@
+@import "../base/listas";
+@import "../base/mediaQuery";
+@import "../base/extends";
+@import "../base/mixin";
+
+/* Header */
+
+.menuContainer {
+    width: 100%;
+    height: auto;
+    background-color: nth($colores, 1);
+
+    @extend %display;
+
+    .menu{
+        @extend %display;
+        .icon:hover{
+        @include animaciones (scale(1.2), transition all 0.2s ease);
+        }
+    }
+    }
+    
+    

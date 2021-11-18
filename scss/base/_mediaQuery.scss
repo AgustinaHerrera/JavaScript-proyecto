@@ -1,0 +1,29 @@
+/* Media Query */
+
+@keyframes change-color{
+    0%{
+        background-color: #c58190;
+    }
+    50%{
+        background-color: #5d2ae7;
+    }
+    100%{
+    background-color: #ec791b;}
+}
+
+/* Mobile */
+
+@media screen and (max-width:480px) {
+    .titulo{
+        font-size: 46px;
+    }
+}
+
+/* Tablet */
+
+@media screen and (min-width:481px) and (max-width: 960px){
+    .titulo{
+        font-size: 56px;
+    }
+}
+

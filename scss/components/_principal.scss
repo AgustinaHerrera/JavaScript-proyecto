@@ -1,0 +1,30 @@
+@import "../base/extends";
+@import "../base/operadores";
+
+/* Home */
+
+body{
+    background-image: url("fondo 20%.png") ;
+    width: 100%;
+    height: auto;
+}
+
+.carrouselContainer{
+    @extend %display;
+    padding: $paddingGeneral;
+    height: auto;
+}
+.photoGridContainer{
+    @extend %display;
+    flex-wrap: wrap;
+}
+
+.photoGridItem{
+    margin: 5px;
+    width: $anchoPrincipalImg +-120px;
+    height: auto;
+    &:hover{
+        @include animaciones (scale(1.1), transition all 0.5s ease);   
+       }
+    }
+

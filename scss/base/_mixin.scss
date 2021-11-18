@@ -1,0 +1,10 @@
+/* Mixins */
+
+@mixin animaciones ($propiedadUno, $propiedadDos) {
+    -webkit-transform: $propiedadUno, $propiedadDos;
+    -o-transform: $propiedadUno, $propiedadDos;
+    -moz-transform: $propiedadUno, $propiedadDos;
+    transform: $propiedadUno;
+    transition: $propiedadDos;
+}
+

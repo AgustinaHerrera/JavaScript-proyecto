@@ -1,0 +1,49 @@
+@import "../base/listas";
+@import "../base/extends";
+@import "../base/mixin";
+@import "../base/operadores";
+@import "../base/mediaQuery";
+
+/* Grids */
+
+.gridContainer{
+    position: relative;
+    top: 30px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 50px 300px 50px;
+    gap: 15px;
+    .gridItem:hover{
+        @include animaciones (scale(1.1), transition all 0.5s ease);
+     }
+}
+
+.photoGrid {
+    width: 900px;
+ @extend %display;
+}
+
+.giftCardContainer{
+    @extend %display;
+    flex-wrap: wrap;
+    .giftCard{
+        width: $anchoPrincipalImg;
+        height: auto;
+        padding: $paddingGeneral *2;
+        margin: 40px;
+        background-color: nth($colores,6);
+        border-radius: 10px;
+        &:hover{
+            animation: change-color 1.5s;
+        }
+    } }
+
+    .imagenes{
+        width: $anchoPrincipalImg;
+         &:hover{
+            opacity: 80%;
+            @include animaciones (scale(1.2), transition all 1s ease);
+        }
+    }
+    

@@ -1,0 +1,35 @@
+@import "../base/listas";
+@import "../base/mediaQuery";
+@import "../base/extends";
+@import "../base/operadores";
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    @extend %display;
+    flex-wrap: wrap;
+    ;
+    background-color: nth($colores, 1);
+    height: auto;
+    font-family: 'Montserrat', sans-serif;
+    padding: $paddingGeneral;
+    a{
+    text-decoration: none;
+    color: nth($colores, 6);
+    font-weight:520;
+    font-size: 1.1em;
+    letter-spacing: 0.15em;
+    }
+    #foot {
+        padding: $paddingGeneral;
+        margin: 10px;
+    
+    &:hover{
+        color:nth($colores, 5);
+    }}
+
+    #actual {
+        color: nth($colores, 2);  
+     }
+}

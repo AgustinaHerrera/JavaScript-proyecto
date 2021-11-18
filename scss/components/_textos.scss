@@ -1,0 +1,50 @@
+@import "../base/listas";
+@import "../base/mediaQuery";
+
+/* Textos */
+
+.titulo{
+@extend %estiloUno;
+    font-size: 64px;
+    text-align: center ;
+    letter-spacing: 0.15em;
+    position: relative;
+    top: 15px;
+}
+
+.subtitulo{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: nth($colores, 3);
+    font-size: 3em;
+   text-align:left ;
+   letter-spacing: 0.15em;
+   display: block;
+   margin: 10px 5px;
+   padding: $paddingGeneral;
+   background-color: rgba(191, 195, 204, 0.514);
+}
+
+.sub{
+    @extend %estiloUno;
+    font-size: 2em;
+   text-align:left ;
+   letter-spacing: 0.15em;
+   padding: $paddingGeneral;
+}
+
+.textosMiCuenta{
+    font-family: 'Montserrat', sans-serif;
+    color: nth($colores, 7);
+    font-size: 1em;
+    @extend %textosP;
+}
+
+.textosParrafos{
+    font-family: 'Montserrat', sans-serif;
+    color: nth($colores, 7);
+    font-size: 1em;
+    text-align: justify;
+    padding: $paddingGeneral +-5px;
+@extend %textosP;
+}
