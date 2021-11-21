@@ -435,6 +435,12 @@ body {
   transition: transition all 1s ease;
 }
 
+.formulario {
+  width: 400px;
+  height: auto;
+  padding: 20px;
+}
+
 /* Botones */
 .button {
   background-color: #bfc3cc;
