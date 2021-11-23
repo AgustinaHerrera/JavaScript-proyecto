@@ -243,10 +243,9 @@
 
 /* Operadores */
 /* Home */
-body {
-  background-image: url("../../src/multimedia/fondo 20%.png");
+.body {
+  background-image: url("../../src/multimedia/fondo.png");
   width: 100%;
-  height: auto;
 }
 
 .carrouselContainer {
