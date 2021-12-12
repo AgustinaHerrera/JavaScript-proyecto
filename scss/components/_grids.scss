@@ -41,6 +41,7 @@
     }
 
     .photoGridContainer{
+        margin-top: 20px;
         @extend %display;
         flex-wrap: wrap;
     }
