@@ -47,7 +47,7 @@
   }
 }
 /* Extends */
-.giftCardContainer, .photoGrid, .photoGridContainer, .carrouselContainer, .footer, .sectionContainer, .menuContainer .menu, .menuContainer {
+.photoGridContainer, .giftCardContainer, .photoGrid, .carrouselContainer, .footer, .sectionContainer, .menuContainer .menu, .menuContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,7 +108,7 @@
   }
 }
 /* Extends */
-.giftCardContainer, .photoGrid, .photoGridContainer, .carrouselContainer, .footer, .sectionContainer, .menuContainer, .menuContainer .menu {
+.photoGridContainer, .giftCardContainer, .photoGrid, .carrouselContainer, .footer, .sectionContainer, .menuContainer, .menuContainer .menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,7 +170,7 @@
   }
 }
 /* Extends */
-.giftCardContainer, .photoGrid, .photoGridContainer, .carrouselContainer, .footer, .menuContainer, .menuContainer .menu, .sectionContainer {
+.photoGridContainer, .giftCardContainer, .photoGrid, .carrouselContainer, .footer, .menuContainer, .menuContainer .menu, .sectionContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,7 +220,7 @@
 }
 
 /* Extends */
-.giftCardContainer, .photoGrid, .photoGridContainer, .carrouselContainer, .menuContainer, .menuContainer .menu, .sectionContainer, .footer {
+.photoGridContainer, .giftCardContainer, .photoGrid, .carrouselContainer, .menuContainer, .menuContainer .menu, .sectionContainer, .footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,23 +251,6 @@ body {
 .carrouselContainer {
   padding: 20px;
   height: auto;
-}
-
-.photoGridContainer {
-  flex-wrap: wrap;
-}
-
-.photoGridItem {
-  margin: 5px;
-  width: 280px;
-  height: auto;
-}
-.photoGridItem:hover {
-  -webkit-transform: scale(1.1), transition all 0.5s ease;
-  -o-transform: scale(1.1), transition all 0.5s ease;
-  -moz-transform: scale(1.1), transition all 0.5s ease;
-  transform: scale(1.1);
-  transition: transition all 0.5s ease;
 }
 
 /* Media Query */
@@ -338,7 +321,7 @@ body {
 }
 
 /* Extends */
-.giftCardContainer, .photoGrid, .menuContainer, .menuContainer .menu, .sectionContainer, .footer, .carrouselContainer, .photoGridContainer {
+.photoGridContainer, .giftCardContainer, .photoGrid, .menuContainer, .menuContainer .menu, .sectionContainer, .footer, .carrouselContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -386,23 +369,6 @@ body {
   }
 }
 /* Grids */
-.gridContainer {
-  position: relative;
-  top: 30px;
-  margin-bottom: 50px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 300px 50px 300px 50px;
-  gap: 15px;
-}
-.gridContainer .gridItem:hover {
-  -webkit-transform: scale(1.1), transition all 0.5s ease;
-  -o-transform: scale(1.1), transition all 0.5s ease;
-  -moz-transform: scale(1.1), transition all 0.5s ease;
-  transform: scale(1.1);
-  transition: transition all 0.5s ease;
-}
-
 .photoGrid {
   width: 900px;
 }
@@ -440,6 +406,24 @@ body {
   padding: 20px;
 }
 
+.photoGridContainer {
+  flex-wrap: wrap;
+}
+
+.photoGridItem {
+  margin: 5px;
+  width: 280px;
+  height: auto;
+}
+.photoGridItem:hover {
+  -webkit-transform: scale(1.1), transition all 0.5s ease;
+  -o-transform: scale(1.1), transition all 0.5s ease;
+  -moz-transform: scale(1.1), transition all 0.5s ease;
+  transform: scale(1.1);
+  transition: transition all 0.5s ease;
+}
+
+/* Operadores */
 /* Botones */
 .button {
   background-color: #bfc3cc;
@@ -453,6 +437,8 @@ body {
   font-size: 16px;
   border-radius: 5px;
   margin: 7px;
+  padding: 4px 25px 4px 25px;
+  width: 100%;
 }
 .button:hover {
   transition: all 0.2s;
@@ -460,7 +446,7 @@ body {
 }
 
 /* Extends */
-.menuContainer, .menuContainer .menu, .sectionContainer, .footer, .carrouselContainer, .photoGridContainer, .photoGrid, .giftCardContainer {
+.menuContainer, .menuContainer .menu, .sectionContainer, .footer, .carrouselContainer, .photoGrid, .giftCardContainer, .photoGridContainer {
   display: flex;
   justify-content: center;
   align-items: center;

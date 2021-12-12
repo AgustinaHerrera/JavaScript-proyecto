@@ -6,19 +6,6 @@
 
 /* Grids */
 
-.gridContainer{
-    position: relative;
-    top: 30px;
-    margin-bottom: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 300px 50px 300px 50px;
-    gap: 15px;
-    .gridItem:hover{
-        @include animaciones (scale(1.1), transition all 0.5s ease);
-     }
-}
-
 .photoGrid {
     width: 900px;
  @extend %display;
@@ -52,3 +39,17 @@
         height: auto;
         padding: $paddingGeneral;
     }
+
+    .photoGridContainer{
+        @extend %display;
+        flex-wrap: wrap;
+    }
+    
+    .photoGridItem{
+        margin: 5px;
+        width: $anchoPrincipalImg +-120px;
+        height: auto;
+        &:hover{
+            @include animaciones (scale(1.1), transition all 0.5s ease);   
+           }
+        }

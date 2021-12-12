@@ -13,17 +13,3 @@ body{
     padding: $paddingGeneral;
     height: auto;
 }
-.photoGridContainer{
-    @extend %display;
-    flex-wrap: wrap;
-}
-
-.photoGridItem{
-    margin: 5px;
-    width: $anchoPrincipalImg +-120px;
-    height: auto;
-    &:hover{
-        @include animaciones (scale(1.1), transition all 0.5s ease);   
-       }
-    }
-
