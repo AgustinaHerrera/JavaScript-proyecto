@@ -75,6 +75,9 @@
   height: auto;
   background-color: #bfc3cc;
 }
+.menuContainer .menu {
+  flex-wrap: wrap;
+}
 .menuContainer .menu .icon:hover {
   -webkit-transform: scale(1.2), transition all 0.2s ease;
   -o-transform: scale(1.2), transition all 0.2s ease;
