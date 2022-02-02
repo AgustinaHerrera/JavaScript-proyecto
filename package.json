@@ -8,11 +8,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "node": "^17.4.0",
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
-    "sass": "^1.43.4"
+    "sass": "^1.49.7"
   },
-  "description": ""
+  "description": "<h1 align=\"center\">Hi 👋, I'm Agustina Herrera</h1> <h3 align=\"center\">A passionate frontend developer from Uruguay</h3>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AgustinaHerrera/proyecto-final-desarrollo-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AgustinaHerrera/proyecto-final-desarrollo-web/issues"
+  },
+  "homepage": "https://github.com/AgustinaHerrera/proyecto-final-desarrollo-web#readme"
 }

@@ -449,6 +449,26 @@ body {
   background-color: #c58190;
 }
 
+.button2 {
+  background-color: #bfc3cc;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 7px;
+  padding: 4px 25px 4px 25px;
+  width: 30px;
+}
+.button2:hover {
+  transition: all 0.2s;
+  background-color: #c58190;
+}
+
 /* Extends */
 .menuContainer, .menuContainer .menu, .sectionContainer, .footer, .carrouselContainer, .photoGrid, .giftCardContainer, .photoGridContainer {
   display: flex;
