@@ -1,41 +1,88 @@
-let nombre = prompt ("Ingrese su nombre");
-let apellido = prompt ("Ingrese su apellido");
-let edad = prompt ("Ingrese su edad");
-let documento = prompt ("Ingrese su documento de identidad");
-let celular = prompt ("Ingrese su número de celular");
-let mail = prompt ("Ingrese su correo electrónico");
-let direccion = prompt ("Ingrese su direccion");
-
-function Usuario (first, last, edad, documento, celular, mail, direccion) {
-    this.nombre = {
-        'first': first,
-        'last': last
-    };
-    this.edad = edad;
-    this.documento = documento;
-    this.celular = celular;
-    this.mail = mail;
-    this.direccion = direccion
-    ;
-
-    if (this.edad<18){
-        alert ("Para comprar en nuestro sitio tenés que ser mayor de edad")
-        }else{
-            alert ("Bienvenid@")
-           }
+class Usuario {
+    constructor (nombre, email, password) {
+        this.nombre = nombre;
+        this.email = email;
+        this.password = password;
+    }
 }
 
-const nuevoUsuario = new Usuario (nombre, apellido, edad, documento, celular, mail, direccion);
+let arrayUsuarios = [];
+let miFormulario = document.querySelector ("#formulario");
+let inputNombre = document.querySelector ("#iNombre");
 
-const usuario1 = [nombre, apellido, edad, documento, celular, mail, direccion];
+let nombreI = formulario.children [1].value;
+let emailI = formulario.children [3].value;
+let passwordI = formulario.children [5].value;
 
-console.log (usuario1.toString());
+let contenedor = document.querySelector ("#usuarioIngresado")
+let displayTodos = document.querySelector ("#displayTodos");
+let parrafos = displayTodos.getElementsByTagName ("p");
+let bandera = false;
 
 
-const direcciones = [];
+miFormulario.addEventListener ("submit", AgregarUsuarios);
+btnMostrar.addEventListener ('click', MostrarTodosLosUsuarios);
 
-direcciones.push ("Colonia");
+inputNombre.focus ();
 
-const addresses = direcciones.concat (usuario1.slice (6));
+function validarForm () {
+    nombreI = formulario.children [1].value;
+    emailI = formulario.children [3].value;
+   passwordI = formulario.children [5].value;
+    console.log (nombreI);
+    console.log (emailI);
+    console.log (passwordI);
 
-console.log (addresses);
+
+if (nombreI == '' || emailI == '' || passwordI == '' ) {
+    alert ('ERROR - Debe completar todos los campos para continuar');
+    inputNombre.focus ();
+    bandera = false;
+} else {
+    bandera = true
+}
+}
+
+function AgregarUsuarios (e) {
+    e.preventDefault ();
+    validarForm ();
+    if (bandera == true) {
+        let opcion = confirm ("¿Está seguro que desea agregar este usuario?");
+        if (opcion == true) {
+            let formulario = e.target
+            arrayUsuarios.push (new Usuario (nombreI, emailI, passwordI));
+        } else {
+            alert ('No se agrega el usuario')
+        }
+
+        formulario.children [1]. value = '';
+        formulario.children [3]. value = '';
+        formulario.children [5]. value = '';
+        contenedor.innerHTML = '';
+        AgregarAlDom ();
+        inputNombre.focus();
+    } else {
+        inputNombre.focus ();
+    }
+}
+
+function AgregarAlDom (){
+    contenedor.innerHTML = `<h3> Ultimo usuario agregado:</h3>
+    <p><strong> Nombre: </strong> ${nombreI}</p>
+    <p><strong> Email: </strong> ${emailI}</p>
+    <p><strong> Contraseña: </strong> ${passwordI}</p> 
+    <hr>`;
+}
+
+function MostrarTodosLosUsuarios (e) {
+    e.preventDefault ();
+    let i = 0;
+    displayTodos.innerHTML = '<h3 class ="sub"> Mis datos: </h3>';
+    for (const usuario of arrayUsuarios) {
+        displayTodos.innerHTML += `
+    <p><strong> Nombre: </strong> ${nombreI}</p>
+    <p><strong> Email: </strong> ${emailI}</p>
+    <p><strong> Contraseña: </strong> ${passwordI}</p> 
+    <hr>`;
+    }
+}
