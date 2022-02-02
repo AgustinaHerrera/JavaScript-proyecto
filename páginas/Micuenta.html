@@ -73,23 +73,23 @@
  <!--Sección dos-->
  <section>
     <h1 class="titulo">Mi cuenta</h1>
-    
+
      <h3 class="sub">Mis datos</h3>
      <div>
-        <div>
+        <div class="textosMiCuenta">
             <form id="formulario">
 <label>Nombre:</label>
-<input class="textosMiCuenta" type="text" name="nombre" id="iNombre">
+<input type="text" name="nombre" id="iNombre">
 
 <label>Email:</label>
-<input class="textosMiCuenta"  type="email" name="email" id="iEmail">
+<input   type="email" name="email" id="iEmail">
 
 <label>Contraseña:</label>
-<input class="textosMiCuenta"  type="password" name="password" id="iPAssword">
+<input   type="password" name="password" id="iPassword">
 
-<div class="button2">
-<input  type="submit" id="btnSubmit" id= "" value="Confirmar">
-<input  type="button" id="btnMostrar" id="" value="Mostrar Todos">
+<div >
+<input class="button2" type="submit" id="btnSubmit" id= "" value="Confirmar">
+<input class="button2" type="button" id="btnMostrar" id="" value="Mostrar Todos">
 </div>
             </form>
 
@@ -106,8 +106,20 @@
  <section>
     <h3 class="sub">Mis direcciones</h3>
     <ul class="textosMiCuenta">
-        <li>Dirección 1</li>
-        <li>Dirección 2</li>
+        <label>Dirección: </label>
+        <input   type="direccion" name="direccion" id="iDireccion">
+        
+        <div >
+        <input class="button2" type="submit" id="btnSubmit" id= "" value="Confirmar">
+        <input class="button2" type="button" id="btnMostrar" id="" value="Mostrar Todos">
+        </div>
+                    </form>
+        
+                    <div id="usuarioIngresado"></div>
+                </div>
+                <div id="displayTodos"></div>
+            </div>
+        <script type="text/javascript" src="../js/direcciones.js"></script>
     </ul>
 </section>
 <!--Fin de sección tres-->
