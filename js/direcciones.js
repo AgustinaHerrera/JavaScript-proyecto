@@ -5,7 +5,7 @@ class Direccion {
     }
 }
 
-let arrayUsuarios = [];
+let arrayDirecciones = [];
 let miFormulario = document.querySelector ("#formulario");
 let inputNombre = document.querySelector ("#iDireccion");
 
@@ -18,7 +18,7 @@ let bandera = false;
 
 
 miFormulario.addEventListener ("submit", AgregarDireccion);
-btnMostrar.addEventListener ('click', MostrarTodasLasDireciiones);
+btnMostrar.addEventListener ('click', MostrarTodasLasDireciones);
 
 inputNombre.focus ();
 
@@ -56,14 +56,13 @@ function AgregarAlDom (){
     <hr>`;
 }
 
-function MostrarTodasLasDireciiones (e) {
+function MostrarTodasLasDireciones (e) {
     e.preventDefault ();
     let i = 0;
     displayTodos.innerHTML = '<h3 class ="sub"> Mis direcciones: </h3>';
     for (const direccion of arrayDirecciones) {
         displayTodos.innerHTML += `
     <p><strong> Nombre: </strong> ${direccionI}</p>
-
     <hr>`;
     }
 }
